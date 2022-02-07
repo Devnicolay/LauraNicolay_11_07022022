@@ -1,0 +1,25 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(/src/styles/font/Montserrat/Montserrat.ttf);
+}
+body {
+  font-family: Montserrat;
+}
+
+.kasa-header {
+  display: flex;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-menu a {
+  color: #ff6060;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */
