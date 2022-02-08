@@ -1,5 +1,8 @@
 @import "./utils/colors.scss";
 
+@import "./base/base";
 @import "./base/typography";
 
 @import "./layout/header.scss";
+@import "./layout/heroHome";
+@import "./layout/error404";

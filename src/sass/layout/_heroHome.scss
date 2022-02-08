@@ -1,0 +1,27 @@
+.hero-home {
+  position: relative;
+  margin-top: 2em;
+  object-fit: cover;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  h1 {
+    position: relative;
+    margin-top: 2em;
+    color: white;
+  }
+}
+
+.hero-home::before {
+  content: "";
+  background-image: url(/src/assets/heroHome.png);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 20px;
+  filter: brightness(70%);
+}

@@ -1,11 +1,11 @@
 import Header from '../components/Header/header'
 
-function About() {
+function Apartment() {
     return (
-        <div>
+        <div> A propos
       <Header />
     </div>
     )
 }
 
-export default About
+export default Apartment

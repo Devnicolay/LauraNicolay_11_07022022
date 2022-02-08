@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Error404 from "./pages/Error404";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="*" element={<Error404 />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>,
