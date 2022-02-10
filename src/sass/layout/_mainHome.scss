@@ -1,0 +1,41 @@
+.main-home {
+  background-color: $secondary;
+  border-radius: 25px;
+  margin-top: 2em;
+  .container-apartment {
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .apart-card {
+      margin-bottom: 2em;
+      position: relative;
+      width: 340px;
+      height: 340px;
+      border-radius: 10px;
+      background-size: cover;
+      .apart-card::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+      }
+      .apart-card-title {
+        width: 300px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 1em;
+        position: absolute;
+        bottom: 0;
+        color: white;
+      }
+    }
+  }
+}
