@@ -1,0 +1,62 @@
+.main-apartment {
+  color: $primary;
+  .header-apartment {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+    .container-info-apartment {
+      .title {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0em;
+        margin-top: 0.2em;
+      }
+      .location {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .tags {
+        display: flex;
+        padding: 0em;
+        li {
+          font-size: 14px;
+          font-weight: 500;
+          background-color: $primary;
+          color: white;
+          border-radius: 10px;
+          margin-right: 2em;
+          padding: 0.5em 2.5em;
+        }
+      }
+    }
+    .container-host {
+      .container-host-person {
+        display: flex;
+        margin-bottom: 1em;
+        .name {
+          margin-top: 0.5em;
+          .host-firstname,
+          .host-lastname {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0em;
+          }
+        }
+        .host-img {
+          width: 64px;
+          height: 64px;
+          border-radius: 9.5em;
+          object-fit: cover;
+          margin-left: 1em;
+        }
+      }
+      .container-stars {
+      }
+    }
+  }
+  .main-apartment {
+    display: flex;
+    gap: 4em;
+    margin: 1em 0em 4em 0em;
+  }
+}

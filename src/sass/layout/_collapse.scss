@@ -1,0 +1,30 @@
+.container-collapse {
+  width: 50%;
+  .collapse {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: left;
+    padding: 0.8em 1em 0em 1em;
+    height: 52px;
+    width: 100%;
+  }
+  .content-collapse {
+    background-color: $secondary;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 18px;
+    line-height: 142.6%;
+    border-radius: 0px 0px 5px 5px;
+    display: none;
+  }
+  .equipment {
+    margin: 0;
+  }
+}
