@@ -1,7 +1,6 @@
 import chevronBottom from "../../assets/arrowBottom.png";
 import chevronTop from "../../assets/arrowTop.png";
 import { useState, useRef } from "react";
-import {} from "../../assets/colorfulStar.png";
 
 function Collapse({ title, content }) {
   const [setActive, setActiveState] = useState("");
@@ -36,7 +35,7 @@ function Collapse({ title, content }) {
         style={{ openCollapse }}
         className="content-collapse"
       >
-        <p>{content}</p>
+        {content}
       </div>
     </div>
   );

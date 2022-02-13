@@ -1,15 +1,18 @@
-import colorfulStar from "../../assets/colorfulStar.png";
-import emptyStar from "../../assets/emptyStar.png";
+import { FaStar } from "react-icons/fa";
 
 function StarRating({ rating }) {
-  console.log(rating);
   return (
     <div>
-      <img src={colorfulStar} alt="rating" />
-      <img src={colorfulStar} alt="rating" />
-      <img src={colorfulStar} alt="rating" />
-      <img src={emptyStar} alt="rating" />
-      <img src={emptyStar} alt="rating" />
+      {[...Array(5)].map((star, i) => {
+        const ratingValue = i + 1;
+        return (
+          <FaStar
+            className="stars"
+            values={`${ratingValue}`}
+            color={ratingValue <= rating ? "#ff6060" : "#e3e3e3"}
+          />
+        );
+      })}
     </div>
   );
 }

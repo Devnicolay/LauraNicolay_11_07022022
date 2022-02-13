@@ -30,6 +30,7 @@
       }
     }
     .container-host {
+      min-width: 150px;
       .container-host-person {
         display: flex;
         margin-bottom: 1em;
@@ -50,7 +51,8 @@
           margin-left: 1em;
         }
       }
-      .container-stars {
+      .stars {
+        font-size: 30px;
       }
     }
   }
