@@ -3,7 +3,7 @@ import Footer from "../components/Footer/footer";
 import Carousel from "../components/Carousel/carousel";
 import MainApartmentPage from "../components/MainApartmentPage/mainApartmentPage";
 import { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Apartment() {
   const [apartments, setApartments] = useState([]);
@@ -27,8 +27,9 @@ function Apartment() {
     (apartment) => apartment.id === id
   );
 
+  let navigate = useNavigate();
   if (!apartmentFoundWithUrlId) {
-    <Navigate to="/error" />;
+    navigate("/error");
   }
 
   return (

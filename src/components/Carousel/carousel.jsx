@@ -4,7 +4,6 @@ import arrowRight from "../../assets/arrowRight.png";
 
 function Carousel({ pictures }) {
   const [carouselIndex, setCarouselIndex] = useState(1);
-  console.log(carouselIndex);
 
   function nextPicture() {
     if (carouselIndex !== pictures.length) {
@@ -22,6 +21,17 @@ function Carousel({ pictures }) {
     }
   }
 
+  const buttonsHtml = (
+    <div>
+      <button type="button" className="btn-carousel-prev" onClick={prevPicture}>
+        <img src={arrowLeft} alt="previous slide" />
+      </button>
+      <button type="button" className="btn-carousel-next" onClick={nextPicture}>
+        <img src={arrowRight} alt="next slide" />
+      </button>
+    </div>
+  );
+
   return (
     <div className="container-carousel">
       {pictures.map((picture, index) => {
@@ -36,12 +46,7 @@ function Carousel({ pictures }) {
           </div>
         );
       })}
-      <button type="button" className="btn-carousel-prev" onClick={prevPicture}>
-        <img src={arrowLeft} alt="previous slide" />
-      </button>
-      <button type="button" className="btn-carousel-next" onClick={nextPicture}>
-        <img src={arrowRight} alt="next slide" />
-      </button>
+      {pictures && pictures.length > 1 ? buttonsHtml : ""}
     </div>
   );
 }
