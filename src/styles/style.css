@@ -28,32 +28,10 @@ body {
   text-decoration: underline;
 }
 
-.hero-home {
-  position: relative;
-  margin-top: 2em;
-  object-fit: cover;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.hero-home h1 {
+.title-hero {
   position: relative;
   margin-top: 2em;
   color: white;
-}
-
-.hero-home::before {
-  content: "";
-  background-image: url(/src/assets/heroHome.png);
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  border-radius: 25px;
-  filter: brightness(70%);
 }
 
 .main-home {
@@ -103,35 +81,46 @@ body {
   color: white;
 }
 
-.carousel-container {
+.container-carousel {
   position: relative;
   margin-top: 2em;
 }
-.carousel-container .carousel-img {
+.container-carousel .carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.container-carousel .carousel-img {
   object-fit: cover;
   width: 100%;
   height: 415px;
   border-radius: 25px;
 }
-.carousel-container .carousel-arrow-left,
-.carousel-container .carousel-arrow-right {
+.container-carousel .active-anim {
+  opacity: 1;
+}
+.container-carousel .btn-carousel-next,
+.container-carousel .btn-carousel-prev {
   cursor: pointer;
   background-color: transparent;
   border: none;
   position: absolute;
   margin-top: 13em;
 }
-.carousel-container .carousel-arrow-left {
-  left: 0;
-  margin-left: 1em;
+.container-carousel .btn-carousel-next {
+  top: 50%;
+  right: 20px;
 }
-.carousel-container .carousel-arrow-right {
-  right: 0;
-  margin-right: 1em;
+.container-carousel .btn-carousel-prev {
+  top: 50%;
+  left: 20px;
 }
 
 .main-apartment {
   color: #ff6060;
+  margin-top: 30em;
 }
 .main-apartment .header-apartment {
   display: flex;
@@ -139,6 +128,7 @@ body {
   margin-top: 1.5em;
 }
 .main-apartment .header-apartment .container-info-apartment .title {
+  max-width: 80%;
   font-size: 36px;
   font-weight: 500;
   margin: 0em;
@@ -222,6 +212,17 @@ body {
 }
 .container-collapse .equipment {
   margin: 0;
+}
+
+.collapse-about {
+  margin-top: 2em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.collapse-about .container-collapse {
+  margin-bottom: 2em;
+  width: 100%;
 }
 
 .main-error404 {

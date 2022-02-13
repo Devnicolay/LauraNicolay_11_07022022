@@ -31,13 +31,13 @@ function Apartment() {
     <Navigate to="/error" />;
   }
 
-  console.log(apartmentFoundWithUrlId);
-
   return (
     <div>
       <div className="main-body">
         <Header />
-        <Carousel />
+        {apartmentFoundWithUrlId && (
+          <Carousel pictures={apartmentFoundWithUrlId.pictures} />
+        )}
         {apartmentFoundWithUrlId && (
           <MainApartmentPage propsApart={apartmentFoundWithUrlId} />
         )}
