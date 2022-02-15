@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/LauraNicolay_11_07022022/static/css/main.cb006676.css",
+    "main.js": "/LauraNicolay_11_07022022/static/js/main.0a23cf92.js",
+    "static/js/787.0ce615c0.chunk.js": "/LauraNicolay_11_07022022/static/js/787.0ce615c0.chunk.js",
+    "static/media/heroAbout.png": "/LauraNicolay_11_07022022/static/media/heroAbout.02e1c4f7498de1cb845b.png",
+    "static/media/heroHome.png": "/LauraNicolay_11_07022022/static/media/heroHome.024f945a990ae17b81b7.png",
+    "static/media/Montserrat.ttf": "/LauraNicolay_11_07022022/static/media/Montserrat.3068cdb43142f5625baf.ttf",
+    "index.html": "/LauraNicolay_11_07022022/index.html",
+    "main.cb006676.css.map": "/LauraNicolay_11_07022022/static/css/main.cb006676.css.map",
+    "main.0a23cf92.js.map": "/LauraNicolay_11_07022022/static/js/main.0a23cf92.js.map",
+    "787.0ce615c0.chunk.js.map": "/LauraNicolay_11_07022022/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb006676.css",
+    "static/js/main.0a23cf92.js"
+  ]
+}
