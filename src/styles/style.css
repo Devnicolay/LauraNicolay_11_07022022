@@ -2,6 +2,12 @@
   margin: 2em 3em;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .main-body {
+    margin: 2em 1em;
+  }
+}
 @font-face {
   font-family: Montserrat;
   src: url(/src/styles/font/Montserrat/Montserrat.ttf);
@@ -22,18 +28,40 @@ body {
   color: #ff6060;
   text-decoration: none;
   font-size: 24px;
+  font-weight: 500;
   margin: 1em;
 }
 .kasa-header .header-nav .active {
   text-decoration: underline;
 }
 
-.title-hero {
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .kasa-header #logo {
+    width: 145px;
+    height: 47px;
+  }
+  .kasa-header .header-nav a {
+    font-size: 12px;
+  }
+}
+.hero-home .title-hero {
   position: relative;
   margin-top: 2em;
   color: white;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .hero-home {
+    height: 111px;
+  }
+  .hero-home .title-hero {
+    font-size: 24px;
+    width: 217px;
+    margin: 1em 0em 0em 1em;
+  }
+}
 .main-home {
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -61,6 +89,7 @@ body {
   bottom: 0px;
   left: 0px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
 }
 .main-home .container-apartment .apart-card .apart-card-title {
   width: 300px;
@@ -72,15 +101,52 @@ body {
   color: white;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .main-home {
+    background-color: transparent;
+  }
+  .main-home .container-apartment {
+    padding: 0;
+    justify-content: center;
+  }
+  .main-home .container-apartment .apart-card {
+    width: 351px;
+    height: 255px;
+  }
+}
+/* For screen between 576px and 900px */
+@media screen and (min-width: 577px) and (max-width: 900px) {
+  .main-home .container-apartment {
+    justify-content: center;
+  }
+}
+/* Mobile : For screen smaller than 400px */
+@media screen and (max-width: 400px) {
+  .main-home .container-apartment .apart-card {
+    width: 300px;
+  }
+}
 .footer {
   padding: 2em 2em 1em 2em;
   background-color: black;
   text-align: center;
 }
+.footer #logo-footer {
+  width: 122px;
+  height: 39.44px;
+}
 .footer .copyright {
   color: white;
+  font-size: 24px;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .footer .copyright {
+    font-size: 12px;
+  }
+}
 .container-carousel {
   position: relative;
   margin-top: 2em;
@@ -110,14 +176,38 @@ body {
   margin-top: 13em;
 }
 .container-carousel .btn-carousel-next {
-  top: 50%;
   right: 20px;
 }
 .container-carousel .btn-carousel-prev {
-  top: 50%;
   left: 20px;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .container-carousel .carousel {
+    height: 255px;
+  }
+  .container-carousel .carousel-img {
+    height: 255px;
+  }
+  .container-carousel .btn-carousel-next,
+.container-carousel .btn-carousel-prev {
+    margin-top: 8.8em;
+  }
+  .container-carousel .btn-carousel-next img,
+.container-carousel .btn-carousel-prev img {
+    width: 11.67px;
+    height: 19.8px;
+  }
+  .container-carousel .btn-carousel-next .btn-carousel-next,
+.container-carousel .btn-carousel-prev .btn-carousel-next {
+    right: 10px;
+  }
+  .container-carousel .btn-carousel-next .btn-carousel-prev,
+.container-carousel .btn-carousel-prev .btn-carousel-prev {
+    left: 10px;
+  }
+}
 .main-apartment {
   color: #ff6060;
   margin-top: 30em;
@@ -177,12 +267,65 @@ body {
 .main-apartment .header-apartment .container-host .stars {
   font-size: 30px;
 }
-.main-apartment .main-apartment {
+.main-apartment .container-collapse {
+  width: 100%;
+}
+.main-apartment .container-collapse .collapse-apartment {
   display: flex;
   gap: 4em;
   margin: 1em 0em 4em 0em;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .main-apartment {
+    margin-top: 18em;
+  }
+  .main-apartment .header-apartment {
+    flex-direction: column;
+  }
+  .main-apartment .header-apartment .container-info-apartment .title {
+    font-size: 18px;
+  }
+  .main-apartment .header-apartment .container-info-apartment .location {
+    font-size: 14px;
+  }
+  .main-apartment .header-apartment .container-info-apartment .tags {
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  .main-apartment .header-apartment .container-info-apartment .tags li {
+    margin-bottom: 1em;
+  }
+  .main-apartment .header-apartment .container-host {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .main-apartment .header-apartment .container-host .container-host-person .name {
+    margin-top: 0;
+  }
+  .main-apartment .header-apartment .container-host .container-host-person .name .host-firstname {
+    font-size: 12px;
+  }
+  .main-apartment .header-apartment .container-host .container-host-person .name .host-lastname {
+    font-size: 12px;
+  }
+  .main-apartment .header-apartment .container-host .container-host-person .host-img {
+    width: 32px;
+    height: 32px;
+  }
+  .main-apartment .header-apartment .container-host .container-stars {
+    margin-top: 0.4em;
+  }
+  .main-apartment .header-apartment .container-host .container-stars .stars {
+    font-size: 15px;
+  }
+  .main-apartment .container-collapse .collapse-apartment {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
 .container-collapse {
   width: 50%;
 }
@@ -203,6 +346,7 @@ body {
 }
 .container-collapse .content-collapse {
   background-color: #f6f6f6;
+  color: #ff6060;
   font-size: 18px;
   font-weight: 400;
   padding: 18px;
@@ -213,7 +357,29 @@ body {
 .container-collapse .equipment {
   margin: 0;
 }
+.container-collapse .chevron-collapse {
+  transition: transform 0.6s ease;
+}
+.container-collapse .rotate {
+  transform: rotate(180deg);
+}
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .container-collapse .collapse {
+    font-size: 13px;
+    height: 24px;
+    border-radius: 5px;
+    padding-top: 0.3em;
+  }
+  .container-collapse .collapse .chevron-collapse {
+    width: 15px;
+    padding-top: 0.2em;
+  }
+  .container-collapse .content-collapse {
+    font-size: 12px;
+  }
+}
 .collapse-about {
   margin-top: 2em;
   width: 80%;
@@ -225,6 +391,18 @@ body {
   width: 100%;
 }
 
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .collapse-about {
+    margin-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero-about {
+    height: 223px;
+  }
+}
 .main-error404 {
   color: #ff6060;
   display: flex;
@@ -246,6 +424,25 @@ body {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 3em;
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .main-error404 {
+    margin-top: 10em;
+  }
+  .main-error404 .error-404 {
+    font-size: 96px;
+  }
+  .main-error404 .error-msg {
+    font-size: 18px;
+    width: 260px;
+    text-align: center;
+  }
+  .main-error404 a {
+    font-size: 14px;
+    margin-top: 6em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,19 @@
-.title-hero {
-  position: relative;
-  margin-top: 2em;
-  color: white;
+.hero-home {
+  .title-hero {
+    position: relative;
+    margin-top: 2em;
+    color: white;
+  }
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .hero-home {
+    height: 111px;
+    .title-hero {
+      font-size: 24px;
+      width: 217px;
+      margin: 1em 0em 0em 1em;
+    }
+  }
 }

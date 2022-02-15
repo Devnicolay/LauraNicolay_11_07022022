@@ -9,6 +9,10 @@ function Hero({ hero, title }) {
     display: flex;
     justify-content: center;
     align-content: center;
+    @media (max-width: 576px) {
+      height: 100%;
+      justify-content: flex-start;
+    }
     &:before {
       content: "";
       background-image: url(${hero});

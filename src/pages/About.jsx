@@ -9,7 +9,9 @@ function About() {
     <div>
       <div className="main-body">
         <Header />
-        <Hero hero={heroAbout} />
+        <div className="hero-about">
+          <Hero hero={heroAbout} />
+        </div>
         <MainAboutPage />
       </div>
       <Footer />

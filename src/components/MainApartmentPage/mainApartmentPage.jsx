@@ -34,16 +34,18 @@ function MainApartmentPage({ propsApart }) {
           </div>
         </div>
       </div>
-      <div className="main-apartment">
-        <Collapse title={"Description"} content={propsApart.description} />
-        <Collapse
-          title={"Équipements"}
-          content={propsApart.equipments.map((equipment, index) => (
-            <p className="equipment" key={index}>
-              {equipment}
-            </p>
-          ))}
-        />
+      <div className="container-collapse">
+        <div className="collapse-apartment">
+          <Collapse title={"Description"} content={propsApart.description} />
+          <Collapse
+            title={"Équipements"}
+            content={propsApart.equipments.map((equipment, index) => (
+              <p className="equipment" key={index}>
+                {equipment}
+              </p>
+            ))}
+          />
+        </div>
       </div>
     </div>
   );

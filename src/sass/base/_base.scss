@@ -1,3 +1,10 @@
 .main-body {
   margin: 2em 3em;
 }
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .main-body {
+    margin: 2em 1em;
+  }
+}

@@ -26,11 +26,35 @@
     margin-top: 13em;
   }
   .btn-carousel-next {
-    top: 50%;
     right: 20px;
   }
   .btn-carousel-prev {
-    top: 50%;
     left: 20px;
+  }
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .container-carousel {
+    .carousel {
+      height: 255px;
+    }
+    .carousel-img {
+      height: 255px;
+    }
+    .btn-carousel-next,
+    .btn-carousel-prev {
+      margin-top: 8.8em;
+      img {
+        width: 11.67px;
+        height: 19.8px;
+      }
+      .btn-carousel-next {
+        right: 10px;
+      }
+      .btn-carousel-prev {
+        left: 10px;
+      }
+    }
   }
 }

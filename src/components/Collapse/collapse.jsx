@@ -1,32 +1,34 @@
 import chevronBottom from "../../assets/arrowBottom.png";
-import chevronTop from "../../assets/arrowTop.png";
 import { useState, useRef } from "react";
 
 function Collapse({ title, content }) {
-  const [setActive, setActiveState] = useState("");
+  const [active, setActiveState] = useState("");
   const [openCollapse, setOpenCollapse] = useState("display=none");
+  const [rotate, setRotate] = useState("chevron-collapse");
 
   const contentActive = useRef(null);
 
   function handleCollapse() {
-    setActiveState(setActive === "" ? "active" : "");
+    setActiveState(active === "" ? "active" : "");
     setOpenCollapse(
-      setActive === "active"
+      active === "active"
         ? `${(contentActive.current.style.display = "none")}`
         : `${(contentActive.current.style.display = "block")}`
     );
+    setRotate(active === "" ? "rotate" : "");
   }
 
   return (
     <div className="container-collapse">
       <button
         type="button"
-        className={`collapse ${setActive}`}
+        className={`collapse ${active}`}
         onClick={handleCollapse}
       >
         {title}
         <img
-          src={openCollapse ? chevronBottom : chevronTop}
+          className={`chevron-collapse ${rotate}`}
+          src={chevronBottom}
           alt="open collapse"
         />
       </button>

@@ -9,3 +9,15 @@
     width: 100%;
   }
 }
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .collapse-about {
+    margin-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero-about {
+    height: 223px;
+  }
+}

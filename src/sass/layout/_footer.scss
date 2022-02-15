@@ -2,7 +2,21 @@
   padding: 2em 2em 1em 2em;
   background-color: black;
   text-align: center;
+  #logo-footer {
+    width: 122px;
+    height: 39.44px;
+  }
   .copyright {
     color: white;
+    font-size: 24px;
+  }
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
+  .footer {
+    .copyright {
+      font-size: 12px;
+    }
   }
 }

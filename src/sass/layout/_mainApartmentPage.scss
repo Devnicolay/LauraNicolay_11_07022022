@@ -58,9 +58,69 @@
       }
     }
   }
+  .container-collapse {
+    width: 100%;
+    .collapse-apartment {
+      display: flex;
+      gap: 4em;
+      margin: 1em 0em 4em 0em;
+    }
+  }
+}
+
+/* Mobile : For screen smaller than 576px */
+@media screen and (max-width: 576px) {
   .main-apartment {
-    display: flex;
-    gap: 4em;
-    margin: 1em 0em 4em 0em;
+    margin-top: 18em;
+    .header-apartment {
+      flex-direction: column;
+      .container-info-apartment {
+        .title {
+          font-size: 18px;
+        }
+        .location {
+          font-size: 14px;
+        }
+        .tags {
+          font-size: 10px;
+          flex-wrap: wrap;
+          li {
+            margin-bottom: 1em;
+          }
+        }
+      }
+      .container-host {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .container-host-person {
+          .name {
+            margin-top: 0;
+            .host-firstname {
+              font-size: 12px;
+            }
+            .host-lastname {
+              font-size: 12px;
+            }
+          }
+          .host-img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        .container-stars {
+          margin-top: 0.4em;
+          .stars {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .container-collapse {
+      .collapse-apartment {
+        flex-direction: column;
+        gap: 2em;
+      }
+    }
   }
 }

@@ -9,7 +9,9 @@ function Home() {
     <div>
       <div className="main-body">
         <Header />
-        <Hero hero={heroHome} title={"Chez vous, partout et ailleurs"} />
+        <div className="hero-home">
+          <Hero hero={heroHome} title={"Chez vous, partout et ailleurs"} />
+        </div>
         <MainHome />
       </div>
       <Footer />

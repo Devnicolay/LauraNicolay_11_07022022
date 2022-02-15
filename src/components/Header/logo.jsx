@@ -1,10 +1,8 @@
-import logo from '../../assets/logo.png'
-import '../../styles/style.css'
+import logo from "../../assets/logo.png";
+import "../../styles/style.css";
 
 function Logo() {
-    return (
-        <img src={ logo} alt='kasa'/>
-    )
+  return <img id="logo" src={logo} alt="kasa" />;
 }
 
-export default Logo
+export default Logo;
