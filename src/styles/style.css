@@ -1,9 +1,17 @@
+.kasa-header {
+  margin: 2em 3em 3em 3em;
+}
+
 .main-body {
   margin: 2em 3em;
 }
 
 /* Mobile : For screen smaller than 576px */
 @media screen and (max-width: 576px) {
+  .kasa-header {
+    margin: 2em 1em 1em 1em;
+  }
+
   .main-body {
     margin: 2em 1em;
   }
@@ -29,7 +37,7 @@ body {
   text-decoration: none;
   font-size: 24px;
   font-weight: 500;
-  margin: 1em;
+  margin-left: 2em;
 }
 .kasa-header .header-nav .active {
   text-decoration: underline;
@@ -45,21 +53,42 @@ body {
     font-size: 12px;
   }
 }
-.hero-home .title-hero {
+.hero-container {
   position: relative;
+}
+.hero-container .img-hero {
   margin-top: 2em;
+  object-fit: cover;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-size: cover;
+  border-radius: 25px;
+  filter: brightness(70%);
+}
+.hero-container .title-hero {
+  position: absolute;
+  top: 1.4em;
+  left: 8em;
   color: white;
 }
 
 /* Mobile : For screen smaller than 576px */
 @media screen and (max-width: 576px) {
-  .hero-home {
+  .hero-container {
     height: 111px;
+    width: 100%;
   }
-  .hero-home .title-hero {
+  .hero-container .img-hero {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-container .title-hero {
     font-size: 24px;
     width: 217px;
-    margin: 1em 0em 0em 1em;
+    top: 0.5em;
+    left: 1em;
   }
 }
 .main-home {
@@ -210,12 +239,14 @@ body {
 }
 .main-apartment {
   color: #ff6060;
-  margin-top: 30em;
 }
 .main-apartment .header-apartment {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5em;
+}
+.main-apartment .header-apartment .container-info-apartment {
+  margin-top: 27em;
 }
 .main-apartment .header-apartment .container-info-apartment .title {
   max-width: 80%;
@@ -243,6 +274,7 @@ body {
 }
 .main-apartment .header-apartment .container-host {
   min-width: 150px;
+  margin-top: 27em;
 }
 .main-apartment .header-apartment .container-host .container-host-person {
   display: flex;
@@ -360,8 +392,11 @@ body {
 .container-collapse .chevron-collapse {
   transition: transform 0.6s ease;
 }
-.container-collapse .rotate {
+.container-collapse .active .chevron-collapse {
   transform: rotate(180deg);
+}
+.container-collapse .active .content-collapse {
+  display: block;
 }
 
 /* Mobile : For screen smaller than 576px */
@@ -399,8 +434,11 @@ body {
     width: 100%;
   }
 
-  .hero-about {
+  .hero-about .hero-container {
     height: 223px;
+  }
+  .hero-about .hero-container .img-hero {
+    object-fit: none;
   }
 }
 .main-error404 {

@@ -1,11 +1,11 @@
 .main-apartment {
   color: $primary;
-  margin-top: 30em;
   .header-apartment {
     display: flex;
     justify-content: space-between;
     margin-top: 1.5em;
     .container-info-apartment {
+      margin-top: 27em;
       .title {
         max-width: 80%;
         font-size: 36px;
@@ -33,6 +33,7 @@
     }
     .container-host {
       min-width: 150px;
+      margin-top: 27em;
       .container-host-person {
         display: flex;
         margin-bottom: 1em;

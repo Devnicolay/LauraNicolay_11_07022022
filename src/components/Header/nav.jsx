@@ -4,7 +4,7 @@ import "../../styles/style.css";
 function Nav() {
   return (
     <nav className="header-nav">
-      <NavLink activeclassname="active-link" to="/">
+      <NavLink activeclassname="active-link" to={"/"}>
         Accueil
       </NavLink>
       <NavLink activeclassname="active-link" to="/about">

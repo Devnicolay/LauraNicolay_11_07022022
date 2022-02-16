@@ -1,9 +1,17 @@
+.kasa-header {
+  margin: 2em 3em 3em 3em;
+}
+
 .main-body {
   margin: 2em 3em;
 }
 
 /* Mobile : For screen smaller than 576px */
 @media screen and (max-width: 576px) {
+  .kasa-header {
+    margin: 2em 1em 1em 1em;
+  }
+
   .main-body {
     margin: 2em 1em;
   }

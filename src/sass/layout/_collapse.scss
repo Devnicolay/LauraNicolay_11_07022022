@@ -31,8 +31,13 @@
   .chevron-collapse {
     transition: transform 0.6s ease;
   }
-  .rotate {
-    transform: rotate(180deg);
+  .active {
+    .chevron-collapse {
+      transform: rotate(180deg);
+    }
+    .content-collapse {
+      display: block;
+    }
   }
 }
 

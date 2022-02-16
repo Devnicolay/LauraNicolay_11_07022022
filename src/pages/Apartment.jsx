@@ -1,5 +1,3 @@
-import Header from "../components/Header/header";
-import Footer from "../components/Footer/footer";
 import Carousel from "../components/Carousel/carousel";
 import MainApartmentPage from "../components/MainApartmentPage/mainApartmentPage";
 import { useEffect, useState } from "react";
@@ -28,14 +26,14 @@ function Apartment() {
   );
 
   let navigate = useNavigate();
-  if (!apartmentFoundWithUrlId) {
-    navigate("/error");
-  }
-
+  useEffect(() => {
+    if (!apartmentFoundWithUrlId) {
+      navigate("/error");
+    }
+  });
   return (
     <div>
       <div className="main-body">
-        <Header />
         {apartmentFoundWithUrlId && (
           <Carousel pictures={apartmentFoundWithUrlId.pictures} />
         )}
@@ -43,7 +41,6 @@ function Apartment() {
           <MainApartmentPage propsApart={apartmentFoundWithUrlId} />
         )}
       </div>
-      <Footer />
     </div>
   );
 }

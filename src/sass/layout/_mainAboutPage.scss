@@ -18,6 +18,11 @@
     width: 100%;
   }
   .hero-about {
-    height: 223px;
+    .hero-container {
+      height: 223px;
+      .img-hero {
+        object-fit: none;
+      }
+    }
   }
 }
