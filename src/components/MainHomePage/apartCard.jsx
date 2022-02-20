@@ -6,18 +6,19 @@ function ApartCard() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    let displayComponent = true;
+    fetch("dataApartments.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setApartments(data);
+      })
+      .catch((error) => {
+        console.log("attention an error has been encountered");
+      });
+    return (displayComponent = false);
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const dataPath = await fetch("dataApartments.json");
-      const data = await dataPath.json();
-      setApartments(data);
-    } catch (exception) {
-      console.log("attention an error has been encountered");
-    }
-  };
 
   return (
     <div className="main-home">

@@ -1,36 +1,39 @@
 import Carousel from "../components/Carousel/carousel";
 import MainApartmentPage from "../components/MainApartmentPage/mainApartmentPage";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Apartment() {
-  const [apartments, setApartments] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const dataPath = await fetch("../dataApartments.json");
-      const data = await dataPath.json();
-      setApartments(data);
-    } catch (exception) {
-      console.log("attention an error has been encountered");
-    }
-  };
+  const [apartmentId, setApartmentId] = useState([]);
 
   const { id } = useParams();
-  const apartmentFoundWithUrlId = apartments.find(
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let displayComponent = true;
+    fetch("../dataApartments.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setApartmentId(data);
+        const apartmentFoundWithUrlId = data.find(
+          (apartment) => apartment.id === id
+        );
+        if (!apartmentFoundWithUrlId) {
+          navigate("/error");
+        }
+      })
+      .catch((error) => {
+        console.log("attention an error has been encountered");
+      });
+    return (displayComponent = false);
+  }, [id, apartmentId, navigate]);
+
+  const apartmentFoundWithUrlId = apartmentId.find(
     (apartment) => apartment.id === id
   );
 
-  let navigate = useNavigate();
-  useEffect(() => {
-    if (!apartmentFoundWithUrlId) {
-      navigate("/error");
-    }
-  });
   return (
     <div>
       <div className="main-body">
