@@ -425,6 +425,12 @@ body {
   margin-bottom: 2em;
   width: 100%;
 }
+.collapse-about .active .chevron-collapse {
+  transform: rotate(180deg);
+}
+.collapse-about .active .content-collapse {
+  display: block;
+}
 
 /* Mobile : For screen smaller than 576px */
 @media screen and (max-width: 576px) {

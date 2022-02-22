@@ -6,7 +6,6 @@ function ApartCard() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    let displayComponent = true;
     fetch("dataApartments.json")
       .then((res) => {
         return res.json();
@@ -17,7 +16,6 @@ function ApartCard() {
       .catch((error) => {
         console.log("attention an error has been encountered");
       });
-    return (displayComponent = false);
   }, []);
 
   return (

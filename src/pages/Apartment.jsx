@@ -10,7 +10,6 @@ function Apartment() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let displayComponent = true;
     fetch("../dataApartments.json")
       .then((res) => {
         return res.json();
@@ -27,8 +26,7 @@ function Apartment() {
       .catch((error) => {
         console.log("attention an error has been encountered");
       });
-    return (displayComponent = false);
-  }, [id, apartmentId, navigate]);
+  }, []);
 
   const apartmentFoundWithUrlId = apartmentId.find(
     (apartment) => apartment.id === id

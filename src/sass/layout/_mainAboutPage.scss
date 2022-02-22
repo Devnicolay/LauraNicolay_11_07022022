@@ -8,6 +8,14 @@
     margin-bottom: 2em;
     width: 100%;
   }
+  .active {
+    .chevron-collapse {
+      transform: rotate(180deg);
+    }
+    .content-collapse {
+      display: block;
+    }
+  }
 }
 
 /* Mobile : For screen smaller than 576px */
